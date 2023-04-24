@@ -1,15 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:pokerrrr_bloc/src/constants/app_theme.dart';
 
 class CustomTheme {
   final Color defaultWhite;
   final Color defaultRed;
   final Color backgroundSplashColor;
 
-  const CustomTheme({
+  CustomTheme({
     this.defaultWhite = Colors.white,
     this.defaultRed = const Color(0xFFCD3131),
     this.backgroundSplashColor = const Color(0xFF000029),
   });
+
+  CustomTheme copyWith(
+      {Color? defaultWhite, Color? defaultRed, Color? backgroundSplashColor}) {
+    return CustomTheme(
+      defaultWhite: defaultWhite ?? this.defaultWhite,
+      defaultRed: defaultRed ?? this.defaultRed,
+      backgroundSplashColor:
+          backgroundSplashColor ?? this.backgroundSplashColor,
+    );
+  }
 }
 
 extension ThemeDataExtensions on ThemeData {
@@ -23,11 +34,18 @@ extension ThemeDataExtensions on ThemeData {
 
   static CustomTheme? empty;
 
-  CustomTheme own() {
+  CustomTheme own({AppTheme? appTheme}) {
     var o = _own[inputDecorationTheme];
     if (o == null) {
-      empty ??= const CustomTheme();
+      empty ??= CustomTheme();
       o = empty;
+    }
+
+    if (appTheme == AppTheme.darkTheme) {
+      return o!.copyWith(
+          defaultWhite: const Color(0x0fffff00),
+          defaultRed: const Color(0xFFFFFF00),
+          backgroundSplashColor: const Color(0xFFDEDEDE));
     }
     return o!;
   }

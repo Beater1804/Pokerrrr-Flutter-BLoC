@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/settings/settings_bloc.dart';
+import 'package:pokerrrr_bloc/src/constants/app_theme.dart';
 import 'package:pokerrrr_bloc/src/ui/splash/splash_screen.dart';
 
 void main() {
@@ -23,6 +26,11 @@ class MyApp extends StatelessWidget {
         ],
         child: BlocBuilder<SettingsBloc, SettingsState>(
           builder: (context, state) {
+            if (state.themes == appThemeData[AppTheme.normalTheme]) {
+              log("TRUE");
+            } else {
+              log("FALSE");
+            }
             return MaterialApp(
               home: const SplashScreen(),
               debugShowCheckedModeBanner: false,
