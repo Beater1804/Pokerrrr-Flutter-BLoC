@@ -1,11 +1,29 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:pokerrrr_bloc/src/blocs/settings/settings_bloc.dart';
+import 'package:pokerrrr_bloc/src/commons/slide_route.dart';
 import 'package:pokerrrr_bloc/src/constants/app_style.dart';
 import 'package:pokerrrr_bloc/src/constants/app_theme.dart';
+import 'package:pokerrrr_bloc/src/ui/onboarding/onboarding_screen.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+          context, SlideRoute(page: const OnboardingScreen(), x: 1, y: 0));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

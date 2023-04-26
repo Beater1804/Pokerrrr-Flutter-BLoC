@@ -5,15 +5,20 @@ class CustomTheme {
   final Color defaultWhite;
   final Color defaultRed;
   final Color backgroundSplashColor;
+  final Color activeButtonColor;
 
   CustomTheme({
     this.defaultWhite = Colors.white,
     this.defaultRed = const Color(0xFFCD3131),
     this.backgroundSplashColor = const Color(0xFF000029),
+    this.activeButtonColor = const Color(0xFF173EA5),
   });
 
-  CustomTheme copyWith(
-      {Color? defaultWhite, Color? defaultRed, Color? backgroundSplashColor}) {
+  CustomTheme copyWith({
+    Color? defaultWhite,
+    Color? defaultRed,
+    Color? backgroundSplashColor,
+  }) {
     return CustomTheme(
       defaultWhite: defaultWhite ?? this.defaultWhite,
       defaultRed: defaultRed ?? this.defaultRed,
