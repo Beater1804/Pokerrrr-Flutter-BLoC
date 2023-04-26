@@ -38,7 +38,7 @@ class CommonButton extends StatelessWidget {
   final Color defaultButtonColor;
   final Color defaultDisableButtonColor;
   final Color defaultTextColor = Colors.white;
-  final double defaultFontSize = 14.0;
+  final double defaultFontSize = 18.0;
   final LinearGradient? gradient;
   final EdgeInsetsGeometry? margin;
   final FontWeight? fontWeight;

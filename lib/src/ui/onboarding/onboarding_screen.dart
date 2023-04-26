@@ -8,7 +8,7 @@ import 'package:pokerrrr_bloc/src/constants/lists.dart';
 import 'package:pokerrrr_bloc/src/ui/onboarding/components/active_indicator.dart';
 import 'package:pokerrrr_bloc/src/ui/onboarding/components/inactive_indicator.dart';
 import 'package:pokerrrr_bloc/src/ui/onboarding/components/onboarding_body.dart';
-import 'package:pokerrrr_bloc/src/ui/selection_authentication/selection_authentication.dart';
+import 'package:pokerrrr_bloc/src/ui/selection_authentication/selection_authentication_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -80,7 +80,7 @@ class OnboardingScreen extends StatelessWidget {
                           Navigator.pushAndRemoveUntil(
                             context,
                             SlideRoute(
-                                page: const SelectionAuthentication(),
+                                page: const SelectionAuthenticationScreen(),
                                 x: 1,
                                 y: 0),
                             (Route<dynamic> route) => false,

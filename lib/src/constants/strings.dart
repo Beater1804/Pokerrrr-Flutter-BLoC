@@ -7,4 +7,11 @@ class Strings {
   static const String subTitleOnBoardingSecond =
       "Cadastre-se e mantenha seu perfil, pokémon favoritos, configurações e muito mais, salvos no aplicativo, mesmo sem conexão com a internet.";
   static const String textOnBoardingSecondButton = "Vamos começar!";
+  static const String next = "Pular";
+  static const String titleSelectionAuthentication =
+      "Está pronto para essa aventura?";
+  static const String subTitleSelectionAuthentication =
+      "Basta criar uma conta e começar a explorar o mundo dos Pokémon hoje!";
+  static const String signUpAuthentication = "Criar conta";
+  static const String loginAuthentication = "Ja tenho uma conta";
 }

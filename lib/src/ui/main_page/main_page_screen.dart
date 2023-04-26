@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SelectionAuthentication extends StatelessWidget {
-  const SelectionAuthentication({super.key});
+class MainPageScreen extends StatelessWidget {
+  const MainPageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

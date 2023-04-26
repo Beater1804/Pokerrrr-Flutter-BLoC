@@ -3,4 +3,6 @@ class ImageAsset {
       'assets/images/Treinadores/OnBoarding1.png';
   static const String onBoardingSecond =
       'assets/images/Treinadores/OnBoarding2.png';
+  static const String selectionAuthentication =
+      'assets/images/Treinadores/SelectionAuthentication.png';
 }
