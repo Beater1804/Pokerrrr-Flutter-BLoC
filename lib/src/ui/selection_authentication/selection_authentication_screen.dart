@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokerrrr_bloc/src/commons/common_button.dart';
@@ -6,6 +5,7 @@ import 'package:pokerrrr_bloc/src/constants/app_color.dart';
 import 'package:pokerrrr_bloc/src/constants/app_style.dart';
 import 'package:pokerrrr_bloc/src/constants/image_asset.dart';
 import 'package:pokerrrr_bloc/src/constants/strings.dart';
+import 'package:pokerrrr_bloc/src/ui/main_page/main_page_screen.dart';
 
 class SelectionAuthenticationScreen extends StatelessWidget {
   const SelectionAuthenticationScreen({super.key});
@@ -19,7 +19,11 @@ class SelectionAuthenticationScreen extends StatelessWidget {
             SizedBox(height: 0.05.sh),
             GestureDetector(
               onTap: () {
-                //TODO: Go to main page
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MainPageScreen()),
+                    (route) => false);
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,

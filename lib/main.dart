@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pokerrrr_bloc/src/blocs/main_page/main_page_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/onboarding/onboarding_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/settings/settings_bloc.dart';
 import 'package:pokerrrr_bloc/src/constants/app_theme.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
         providers: [
           BlocProvider(create: (context) => SettingsBloc()),
-          BlocProvider(create: (context) => OnboardingBloc())
+          BlocProvider(create: (context) => OnboardingBloc()),
+          BlocProvider(create: (context) => MainPageBloc()),
         ],
         child: BlocBuilder<SettingsBloc, SettingsState>(
           builder: (context, state) {

@@ -14,4 +14,8 @@ class Strings {
       "Basta criar uma conta e começar a explorar o mundo dos Pokémon hoje!";
   static const String signUpAuthentication = "Criar conta";
   static const String loginAuthentication = "Ja tenho uma conta";
+  static const String nameNavigationOne = "Pokedéx";
+  static const String nameNavigationTwo = "Regiões";
+  static const String nameNavigationThree = "Favoritos";
+  static const String nameNavigationFour = "Conta";
 }

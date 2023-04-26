@@ -17,4 +17,22 @@ class Lists {
       texButton: Strings.textOnBoardingSecondButton,
     ),
   ];
+  static const List<String> listIcon = [
+    ImageAsset.iconNavigationOne,
+    ImageAsset.iconNavigationTwo,
+    ImageAsset.iconNavigationThree,
+    ImageAsset.iconNavigationFour,
+  ];
+  static const List<String> listIconSelect = [
+    ImageAsset.iconNavigationOneSelect,
+    ImageAsset.iconNavigationTwoSelect,
+    ImageAsset.iconNavigationThreeSelect,
+    ImageAsset.iconNavigationFourSelect,
+  ];
+  static const List<String> listMenuName = [
+    Strings.nameNavigationOne,
+    Strings.nameNavigationTwo,
+    Strings.nameNavigationThree,
+    Strings.nameNavigationFour,
+  ];
 }
