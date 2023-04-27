@@ -55,4 +55,6 @@ class AppColors {
   static const Color botaoVenenosoText = Color(0xFF000000);
   static const Color botaoVoadorButton = Color(0xFF89AAE3);
   static const Color botaoVoadorText = Color(0xFF000000);
+  //Title Menu Navigator
+  static const Color titleMenuNavigator = Color(0xFF173EA5);
 }

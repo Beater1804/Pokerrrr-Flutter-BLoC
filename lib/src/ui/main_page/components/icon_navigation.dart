@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pokerrrr_bloc/src/constants/app_color.dart';
+import 'package:pokerrrr_bloc/src/constants/app_style.dart';
 
 class IconNavigation extends StatelessWidget {
   final bool isSelect;
@@ -15,21 +17,29 @@ class IconNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 80,
       width: 60,
       child: isSelect
           ? Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   height: 40,
                   width: 40,
                   child: Image.asset(iconSelect),
                 ),
-                Text(title),
+                Text(
+                  title,
+                  style: AppStyle.defaultText(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.titleMenuNavigator,
+                  ),
+                ),
               ],
             )
-          : Container(
+          : SizedBox(
               height: 40,
               width: 40,
               child: Image.asset(icon),
