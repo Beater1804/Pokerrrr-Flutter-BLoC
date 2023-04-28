@@ -69,6 +69,12 @@ flutter:
     - assets/images/
     - assets/images/Treinadores/
     - assets/images/Outros/
+    - assets/images/BackgroundElementos/
+    - assets/images/Pokémons/
+    - assets/images/Ícones/
+    - assets/images/Elementos/OutlineIcons/
+    - assets/images/Elementos/Icons/
+    - assets/images/BigElementoOutlines/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

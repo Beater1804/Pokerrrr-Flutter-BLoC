@@ -57,4 +57,33 @@ class AppColors {
   static const Color botaoVoadorText = Color(0xFF000000);
   //Title Menu Navigator
   static const Color titleMenuNavigator = Color(0xFF173EA5);
+  //Color Icon Search
+  static const Color iconSearchPokedex = Color(0xFF666666);
+  static const Color borderSearchPokedex = Color(0xFFCCCCCC);
+  static const Color hintSearchPokedex = Color(0xFF999999);
+  //Color background button search by select
+  static const Color backgroundButtonSearchBySelect = Color(0xFF333333);
+  //Color pin bottom sheet
+  static const Color pinBottomSheetPokedex = Color(0xFFE6E6E6);
+  //Color divider Pokedex
+  static const Color dividerPokedex = Color(0xFFCCCCCC);
+  //Background Pokemon Card
+  static const Color backgroundGramaCard = Color(0xFFEDF6EC);
+  static const Color backgroundFogoCard = Color(0xFFFCF3EB);
+  static const Color backgroundAguaCard = Color(0xFFEBF1F8);
+  static const Color backgroundInsetoCard = Color(0xFFF1F6E8);
+  static const Color backgroundEletricoCard = Color(0xFFFBF8E9);
+  static const Color backgroundFadaCard = Color(0xFFFBF1FA);
+  static const Color backgroundTerrestreCard = Color(0xFFF9EFEA);
+  static const Color backgroundPedraCard = Color(0xFFF7F5F1);
+  static const Color backgroundNormalCard = Color(0xFFF1F2F3);
+  static const Color backgroundVenenosoCard = Color(0xFFF5EDF8);
+  static const Color backgroundPsiquicoCard = Color(0xFFFCEEEF);
+  static const Color backgroundMetalCard = Color(0xFFECF1F3);
+  static const Color backgroundDragaoCard = Color(0xFFE4EEF6);
+  static const Color backgroundLutadorCard = Color(0xFFF8E9EE);
+  static const Color backgroundNoturnoCard = Color(0xFFECEBED);
+  static const Color backgroundFantasmaCard = Color(0xFFEBEDF4);
+  static const Color backgroundGeloCard = Color(0xFFF1FBF9);
+  static const Color backgroundVoadorCard = Color(0xFFF1F4FA);
 }
