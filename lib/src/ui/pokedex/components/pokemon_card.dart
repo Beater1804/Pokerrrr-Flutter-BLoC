@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pokerrrr_bloc/src/blocs/pokedex/pokedex_bloc.dart';
 import 'package:pokerrrr_bloc/src/commons/elemento_widget.dart';
 import 'package:pokerrrr_bloc/src/constants/app_style.dart';
+import 'package:pokerrrr_bloc/src/constants/image_asset.dart';
 import 'package:pokerrrr_bloc/src/models/pokemon.dart';
 import 'package:pokerrrr_bloc/src/utils/method_utils.dart';
 
@@ -94,6 +97,34 @@ class PokemonCard extends StatelessWidget {
                   ),
                 ),
               ),
+              Positioned(
+                top: 4.h,
+                right: 4.w,
+                child: BlocBuilder<PokedexBloc, PokedexState>(
+                  builder: (context, state) {
+                    final bool isFavorite = state is PokedexInitial &&
+                        state.currentPokemon.isFavorite;
+                    return GestureDetector(
+                      onTap: () {
+                        final updatedPokemon =
+                            currentPokemon.copyWith(isFavorite: !isFavorite);
+                        context
+                            .read<PokedexBloc>()
+                            .add(UpdatePokemon(updatedPokemon: updatedPokemon));
+                      },
+                      child: SizedBox(
+                          height: 32.h,
+                          width: 32.w,
+                          child: Image.asset(
+                            isFavorite
+                                ? ImageAsset.activeFavorite
+                                : ImageAsset.inactiveFavorite,
+                            fit: BoxFit.contain,
+                          )),
+                    );
+                  },
+                ),
+              )
             ],
           )
         ],

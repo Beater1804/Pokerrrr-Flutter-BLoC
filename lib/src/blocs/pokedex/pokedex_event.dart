@@ -22,3 +22,12 @@ class ChooseOrdem extends PokedexEvent {
   @override
   List<Object> get props => [selectedOrdem];
 }
+
+class UpdatePokemon extends PokedexEvent {
+  final Pokemon updatedPokemon;
+
+  const UpdatePokemon({required this.updatedPokemon});
+
+  @override
+  List<Object> get props => [updatedPokemon];
+}
