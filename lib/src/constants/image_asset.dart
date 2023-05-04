@@ -69,7 +69,7 @@ class ImageAsset {
   static const String avatarCharmeleon =
       "assets/images/Pokémons/CharmeleonGif.gif";
   static const String avatarCharizard =
-      "assets/images/Pokémons/CharizrdGif.gif";
+      "assets/images/Pokémons/CharizardGif.gif";
   static const String avatarSquirtle = "assets/images/Pokémons/SquirtleGif.gif";
   static const String avatarWartortle =
       "assets/images/Pokémons/WartortleGif.gif";
@@ -161,7 +161,7 @@ class ImageAsset {
       "assets/images/Elementos/Icons/Ghost.png";
   static const String elementoGelo = "assets/images/Elementos/Icons/Ice.png";
   static const String elementoVoador =
-      "assets/images/Elementos/Icons/Voador.png";
+      "assets/images/Elementos/Icons/Flying.png";
   //Icon Favorite
   static const String inactiveFavorite = "assets/images/Ícones/Fav_2.png";
   static const String activeFavorite = "assets/images/Ícones/Fav_2Artist.png";

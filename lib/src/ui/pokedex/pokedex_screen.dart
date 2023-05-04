@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokerrrr_bloc/src/blocs/pokedex/pokedex_bloc.dart';
-import 'package:pokerrrr_bloc/src/commons/elemento_widget.dart';
 import 'package:pokerrrr_bloc/src/constants/app_color.dart';
-import 'package:pokerrrr_bloc/src/constants/app_style.dart';
 import 'package:pokerrrr_bloc/src/constants/lists.dart';
 import 'package:pokerrrr_bloc/src/constants/strings.dart';
 import 'package:pokerrrr_bloc/src/ui/pokedex/components/ordem_bottomsheet.dart';
@@ -105,9 +103,20 @@ class PokedexScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                child: PokemonCard(currentPokemon: Lists.listPokemon.first),
+              BlocBuilder<PokedexBloc, PokedexState>(
+                builder: (context, state) {
+                  return Column(
+                    children: [
+                      for (int i = 0; i < Lists.listPokemon.length; i++)
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          child: PokemonCard(
+                            currentPokemon: Lists.listPokemon[i],
+                          ),
+                        ),
+                    ],
+                  );
+                },
               ),
             ],
           ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokerrrr_bloc/src/constants/app_color.dart';
 import 'package:pokerrrr_bloc/src/constants/app_style.dart';
-import 'package:pokerrrr_bloc/src/constants/image_asset.dart';
 import 'package:pokerrrr_bloc/src/models/elemento.dart';
 
 class ElementoWidget extends StatelessWidget {

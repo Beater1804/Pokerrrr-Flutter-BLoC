@@ -292,11 +292,4 @@ class Strings {
       "Quando este Pokémon está bem de saúde, seu ranho fica mais grosso e pegajoso. Ele vai espalhar seu ranho em quem não gosta.";
   static const String descToucannon =
       "Eles batem bicos com outros de sua espécie para se comunicar. A força e o número de acertos dizem uns aos outros como eles se sentem.";
-  //Pokemon 1
-  static const String namePokemonOne = "Bulbasaur";
-  static const String nomePokemonOne = "Nº001";
-  static const String firstElementoOne = "Grama";
-  static const String secondElementoOne = "Venenoso";
-  static const String descPokemonOne =
-      "Há uma semente de planta nas costas desde o dia em que este Pokémon nasce. A semente cresce lentamente.";
 }

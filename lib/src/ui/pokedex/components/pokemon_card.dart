@@ -100,31 +100,27 @@ class PokemonCard extends StatelessWidget {
               Positioned(
                 top: 4.h,
                 right: 4.w,
-                child: BlocBuilder<PokedexBloc, PokedexState>(
-                  builder: (context, state) {
-                    final bool isFavorite = state is PokedexInitial &&
-                        state.currentPokemon.isFavorite;
-                    return GestureDetector(
-                      onTap: () {
-                        final updatedPokemon =
-                            currentPokemon.copyWith(isFavorite: !isFavorite);
-                        context
-                            .read<PokedexBloc>()
-                            .add(UpdatePokemon(updatedPokemon: updatedPokemon));
-                      },
-                      child: SizedBox(
-                          height: 32.h,
-                          width: 32.w,
-                          child: Image.asset(
-                            isFavorite
-                                ? ImageAsset.activeFavorite
-                                : ImageAsset.inactiveFavorite,
-                            fit: BoxFit.contain,
-                          )),
-                    );
+                child: GestureDetector(
+                  onTap: () {
+                    print("Tap o UI: ${currentPokemon.nome}");
+                    final updatedPokemon = currentPokemon.copyWith(
+                        isFavorite: !currentPokemon.isFavorite);
+                    print(updatedPokemon.isFavorite);
+                    context
+                        .read<PokedexBloc>()
+                        .add(UpdatePokemon(updatedPokemon: updatedPokemon));
                   },
+                  child: SizedBox(
+                      height: 32.h,
+                      width: 32.w,
+                      child: Image.asset(
+                        currentPokemon.isFavorite
+                            ? ImageAsset.activeFavorite
+                            : ImageAsset.inactiveFavorite,
+                        fit: BoxFit.contain,
+                      )),
                 ),
-              )
+              ),
             ],
           )
         ],

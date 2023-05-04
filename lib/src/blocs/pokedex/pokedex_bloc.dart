@@ -39,9 +39,12 @@ class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
         final updatedPokemon = event.updatedPokemon;
         final index = Lists.listPokemon
             .indexWhere((pokemon) => pokemon.nome == updatedPokemon.nome);
+        print("Nome select: ${Lists.listPokemon[index].nome}");
         print("Before change: ${Lists.listPokemon[index].isFavorite}");
         if (index != -1) {
           Lists.listPokemon[index] = updatedPokemon;
+          print(
+              "Phần tử tiếp theo: ${Lists.listPokemon[index + 1].isFavorite}");
           print("After change: ${Lists.listPokemon[index].isFavorite}");
           emit(state.copyWith(currentPokemon: updatedPokemon));
         }
