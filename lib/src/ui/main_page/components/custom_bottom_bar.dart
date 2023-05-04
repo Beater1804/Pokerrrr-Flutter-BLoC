@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokerrrr_bloc/src/blocs/main_page/main_page_bloc.dart';
 import 'package:pokerrrr_bloc/src/constants/lists.dart';
 import 'package:pokerrrr_bloc/src/ui/main_page/components/icon_navigation.dart';
@@ -11,6 +12,7 @@ class CustomBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 72.h,
       decoration: const BoxDecoration(
         color: Colors.transparent,
         borderRadius: BorderRadius.only(

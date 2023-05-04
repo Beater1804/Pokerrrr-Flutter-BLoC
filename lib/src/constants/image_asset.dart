@@ -89,13 +89,99 @@ class ImageAsset {
   static const String avatarRayquaza = "assets/images/Pokémons/RayquazaGif.gif";
   static const String avatarLucario = "assets/images/Pokémons/LucarioGif.gif";
   static const String avatarSerperior =
-      "assets/images/Pokesmons/SerperiorGif.gif";
+      "assets/images/Pokémons/SerperiorGif.gif";
   static const String avatarZoroark = "assets/images/Pokémons/ZoroarkGif.gif";
   static const String avatarChandelure =
       "assets/images/Pokémons/ChandelureGif.gif";
   static const String avatarCubchoo = "assets/images/Pokémons/CubchooGif.gif";
   static const String avatarToucannon =
       "assets/images/Pokémons/ToucannonGif.gif";
+  //Avatar png
+  static const String avatarPngBulbasaur =
+      "assets/images/Pokémons/Bulbasaur-02.png";
+  static const String avatarPngIvysaur =
+      "assets/images/Pokémons/Ivysaur-02.png";
+  static const String avatarPngVenusaur =
+      "assets/images/Pokémons/Venusaur-02.png";
+  static const String avatarPngCharmander =
+      "assets/images/Pokémons/Charmander-02.png";
+  static const String avatarPngCharmeleon =
+      "assets/images/Pokémons/Charmeleon-02.png";
+  static const String avatarPngCharizard =
+      "assets/images/Pokémons/Charizard-02.png";
+  static const String avatarPngSquirtle =
+      "assets/images/Pokémons/Squirtle-02.png";
+  static const String avatarPngWartortle =
+      "assets/images/Pokémons/Wartortle-02.png";
+  static const String avatarPngBlastoise =
+      "assets/images/Pokémons/Blastoise-02.png";
+  static const String avatarPngWeedle =
+      "assets/images/Pokémons/beedrill-03.png";
+  static const String avatarPngKakuna =
+      "assets/images/Pokémons/beedrill-02.png";
+  static const String avatarPngBeedrill =
+      "assets/images/Pokémons/beedrill-01.png";
+  static const String avatarPngPichu = "assets/images/Pokémons/pikachu-04.png";
+  static const String avatarPngPikachu =
+      "assets/images/Pokémons/pikachu-02.png";
+  static const String avatarPngRaichu = "assets/images/Pokémons/pikachu-03.png";
+  static const String avatarPngCleffa =
+      "assets/images/Pokémons/clefairy-04.png";
+  static const String avatarPngClefairy =
+      "assets/images/Pokémons/clefairy-02.png";
+  static const String avatarPngClefable =
+      "assets/images/Pokémons/clefairy-03.png";
+  static const String avatarPngDiglett =
+      "assets/images/Pokémons/dugtrio-03.png";
+  static const String avatarPngDugtrio =
+      "assets/images/Pokémons/dugtrio-02.png";
+  static const String avatarPngOnix = "assets/images/Pokémons/onix-02.png";
+  static const String avatarPngSteelix = "assets/images/Pokémons/onix-03.png";
+  static const String avatarPngLickitung =
+      "assets/images/Pokémons/lickitung-02.png";
+  static const String avatarPngLickilicky =
+      "assets/images/Pokémons/lickitung-03.png";
+  static const String avatarPngKoffing =
+      "assets/images/Pokémons/koffing-02.png";
+  static const String avatarPngWeezing =
+      "assets/images/Pokémons/koffing-03.png";
+  static const String avatarPngMew = "assets/images/Pokémons/mew-02.png";
+  static const String avatarPngSuicune =
+      "assets/images/Pokémons/suicune-02.png";
+  static const String avatarPngAron = "assets/images/Pokémons/aggron-02.png";
+  static const String avatarPngLairon = "assets/images/Pokémons/aggron-03.png";
+  static const String avatarPngAggron = "assets/images/Pokémons/aggron-04.png";
+  static const String avatarPngRayquaza =
+      "assets/images/Pokémons/rayquaza-02.png";
+  static const String avatarPngRiolu = "assets/images/Pokémons/lucario-03.png";
+  static const String avatarPngLucario =
+      "assets/images/Pokémons/lucario-02.png";
+  static const String avatarPngSnivy =
+      "assets/images/Pokémons/serperior-04.png";
+  static const String avatarPngServine =
+      "assets/images/Pokémons/serperior-02.png";
+  static const String avatarPngSerperior =
+      "assets/images/Pokémons/serperior-03.png";
+  static const String avatarPngZorua = "assets/images/Pokémons/zoroark-03.png";
+  static const String avatarPngZoroark =
+      "assets/images/Pokémons/zoroark-02.png";
+  static const String avatarPngLitwick =
+      "assets/images/Pokémons/chandelure-04.png";
+  static const String avatarPngLampet =
+      "assets/images/Pokémons/chandelure-03.png";
+  static const String avatarPngChandelure =
+      "assets/images/Pokémons/chandelure-02.png";
+  static const String avatarPngCubchoo =
+      "assets/images/Pokémons/cubchoo-02.png";
+  static const String avatarPngBeartic =
+      "assets/images/Pokémons/cubchoo-03.png";
+  static const String avatarPngPipipek =
+      "assets/images/Pokémons/toucannon-04.png";
+  static const String avatarPngTrumbeak =
+      "assets/images/Pokémons/toucannon-03.png";
+  static const String avatarPngToucannon =
+      "assets/images/Pokémons/toucannon-02.png";
+
   //Elemento Outline
   static const String elementoOutlineGrama =
       "assets/images/BigElementoOutlines/BigElementoGrama.png";
@@ -106,7 +192,7 @@ class ImageAsset {
   static const String elementoOutlineInseto =
       "assets/images/BigElementoOutlines/BigElementoInseto.png";
   static const String elementoOutlineEletrico =
-      "assets/images/BigElementoOutlines/BigElementoElectrico.png";
+      "assets/images/BigElementoOutlines/BigElementoEletrico.png";
   static const String elementoOutlineFada =
       "assets/images/BigElementoOutlines/BigElementoFada.png";
   static const String elementoOutlineTerrestre =

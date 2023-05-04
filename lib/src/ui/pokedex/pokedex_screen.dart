@@ -20,108 +20,123 @@ class PokedexScreen extends StatelessWidget {
     return GestureDetector(
       onTap: () => MethodUtils.closeKeyboard(context),
       child: Scaffold(
-          body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const SearchPokedex(),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 20),
-                child: Divider(
-                  height: 4,
-                  color: AppColors.dividerPokedex,
+        body: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
+          child: SizedBox(
+            width: 1.sw,
+            height: 1.sh,
+            child: Column(
+              children: [
+                const SearchPokedex(),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 12.h),
+                  child: Divider(
+                    height: 4.h,
+                    color: AppColors.dividerPokedex,
+                  ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 0.05.sw),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                          context: context,
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(15),
-                              topRight: Radius.circular(15),
-                            ),
-                          ),
-                          builder: (BuildContext context) {
-                            return const ClipRRect(
+                SizedBox(
+                  height: 0.05.sh,
+                  width: 1.sw,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 0.05.sw),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            showModalBottomSheet(
+                              context: context,
+                              shape: const RoundedRectangleBorder(
                                 borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(15),
                                   topRight: Radius.circular(15),
                                 ),
-                                child: TiposBottomSheet());
-                          },
-                        );
-                      },
-                      child: BlocBuilder<PokedexBloc, PokedexState>(
-                        builder: (context, state) {
-                          if (state is PokedexInitial) {
-                            return SelectButton(
-                              titleText: state.selectedTipos.title,
-                              titleColor: state.selectedTipos.textColor,
-                              backgroundColor:
-                                  state.selectedTipos.backgroundColor,
+                              ),
+                              builder: (BuildContext context) {
+                                return const ClipRRect(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(15),
+                                      topRight: Radius.circular(15),
+                                    ),
+                                    child: TiposBottomSheet());
+                              },
                             );
-                          }
-                          return const SelectButton();
-                        },
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                          context: context,
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(15),
-                              topRight: Radius.circular(15),
-                            ),
-                          ),
-                          builder: (BuildContext context) {
-                            return const OrdemBottomSheet();
                           },
-                        );
-                      },
-                      child: BlocBuilder<PokedexBloc, PokedexState>(
-                        builder: (context, state) {
-                          if (state is PokedexInitial) {
-                            return SelectButton(
-                              titleText: state.selectedOrdem,
-                            );
-                          }
-                          return const SelectButton(
-                            titleText: Strings.ordemOne,
-                          );
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 10),
-              BlocBuilder<PokedexBloc, PokedexState>(
-                builder: (context, state) {
-                  return Column(
-                    children: [
-                      for (int i = 0; i < Lists.listPokemon.length; i++)
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10.0),
-                          child: PokemonCard(
-                            currentPokemon: Lists.listPokemon[i],
+                          child: BlocBuilder<PokedexBloc, PokedexState>(
+                            builder: (context, state) {
+                              if (state is PokedexInitial) {
+                                return SelectButton(
+                                  titleText: state.selectedTipos.title,
+                                  titleColor: state.selectedTipos.textColor,
+                                  backgroundColor:
+                                      state.selectedTipos.backgroundColor,
+                                );
+                              }
+                              return const SelectButton();
+                            },
                           ),
                         ),
-                    ],
-                  );
-                },
-              ),
-            ],
+                        GestureDetector(
+                          onTap: () {
+                            showModalBottomSheet(
+                              context: context,
+                              shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                ),
+                              ),
+                              builder: (BuildContext context) {
+                                return const OrdemBottomSheet();
+                              },
+                            );
+                          },
+                          child: BlocBuilder<PokedexBloc, PokedexState>(
+                            builder: (context, state) {
+                              if (state is PokedexInitial) {
+                                return SelectButton(
+                                  titleText: state.selectedOrdem,
+                                );
+                              }
+                              return const SelectButton(
+                                titleText: Strings.ordemOne,
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Expanded(
+                  child: BlocBuilder<PokedexBloc, PokedexState>(
+                    builder: (context, state) {
+                      return ListView.builder(
+                        physics: const BouncingScrollPhysics(
+                            parent: AlwaysScrollableScrollPhysics()),
+                        padding: EdgeInsets.symmetric(horizontal: 16.w),
+                        shrinkWrap: true,
+                        itemCount: Lists.listPokemon.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: EdgeInsets.symmetric(vertical: 8.h),
+                            child: PokemonCard(
+                              currentPokemon: Lists.listPokemon[index],
+                            ),
+                          );
+                        },
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(height: 90.h),
+              ],
+            ),
           ),
         ),
-      )),
+      ),
     );
   }
 }

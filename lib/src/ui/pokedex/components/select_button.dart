@@ -37,7 +37,7 @@ class SelectButton extends StatelessWidget {
                 child: Text(
                   titleText,
                   style: AppStyle.defaultText(
-                      fontSize: 14,
+                      fontSize: 14.sp,
                       fontWeight: FontWeight.w600,
                       color: titleColor),
                 ),

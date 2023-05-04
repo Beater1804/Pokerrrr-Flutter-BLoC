@@ -156,7 +156,8 @@ class Strings {
   static const String lv37 = "Nível 37";
   static const String lv14 = "Nível 14";
   static const String lv28 = "Nível 28";
-  static const String lv07 = "Nível 10";
+  static const String lv07 = "Nível 07";
+  static const String lv10 = "Nível 10";
   static const String lv26 = "Nível 26";
   static const String lv35 = "Nível 35";
   static const String lv32 = "Nível 32";

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "221492435083",
+    "project_id": "pokerrrr-eef97",
+    "storage_bucket": "pokerrrr-eef97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221492435083:android:7dd0c883a4ed9e36415c8e",
+        "android_client_info": {
+          "package_name": "com.beater.dev.pokerrrr_bloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221492435083-lmgqb2qq49vpk6mp82h2cepibtj2op5d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZjhi_bXivokDpbcZfxOqA5j681qIDS9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221492435083-lmgqb2qq49vpk6mp82h2cepibtj2op5d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

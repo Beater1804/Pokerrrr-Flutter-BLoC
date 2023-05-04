@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokerrrr_bloc/src/blocs/main_page/main_page_bloc.dart';
 import 'package:pokerrrr_bloc/src/ui/conta/conta_screen.dart';
 import 'package:pokerrrr_bloc/src/ui/favoritos/favoritos_screen.dart';
@@ -13,6 +14,7 @@ class MainPageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: SafeArea(
         child: BlocBuilder<MainPageBloc, MainPageState>(
           builder: (context, state) {
