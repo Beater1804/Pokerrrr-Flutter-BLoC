@@ -43,11 +43,6 @@ class Lists {
   ];
   static const List<Tipos> listTipos = [
     Tipos(
-      title: Strings.tiposOne,
-      textColor: AppColors.botaoTodosText,
-      backgroundColor: AppColors.botaoTodosButton,
-    ),
-    Tipos(
       title: Strings.tiposTwo,
       textColor: AppColors.botaoAguaText,
       backgroundColor: AppColors.botaoAguaButton,
