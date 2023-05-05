@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pokerrrr_bloc/src/commons/elemento_widget.dart';
 import 'package:pokerrrr_bloc/src/constants/app_color.dart';
 import 'package:pokerrrr_bloc/src/constants/app_style.dart';
 import 'package:pokerrrr_bloc/src/constants/strings.dart';
@@ -67,6 +68,23 @@ class DetailPokemonScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 10.h),
                 PercentGender(maleGender: currentPokemon.generoMale ?? 0.0),
+                SingleChildScrollView(
+                  child: GridView.count(
+                    shrinkWrap: true,
+                    crossAxisCount: 2,
+                    childAspectRatio: 1 / .2,
+                    mainAxisSpacing: 8,
+                    crossAxisSpacing: 16,
+                    children: currentPokemon.listFraquezas
+                        .map(
+                          (fraquezas) => ElementoWidget(
+                            currentElemento: fraquezas,
+                            isExpanded: true,
+                          ),
+                        )
+                        .toList(),
+                  ),
+                ),
                 SizedBox(
                   height: 800,
                 )

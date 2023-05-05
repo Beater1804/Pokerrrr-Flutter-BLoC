@@ -11,6 +11,7 @@ class ElementoWidget extends StatelessWidget {
   final double paddingHoz;
   final double paddingVer;
   final Elemento currentElemento;
+  final bool isExpanded;
 
   const ElementoWidget({
     super.key,
@@ -20,10 +21,71 @@ class ElementoWidget extends StatelessWidget {
     this.sizeIcon = 13,
     this.paddingHoz = 8,
     this.paddingVer = 0,
+    this.isExpanded = false,
   });
 
   @override
   Widget build(BuildContext context) {
+    if (isExpanded) {
+      return buildExpandedElementoWidget();
+    } else {
+      return buildElementoWidget();
+    }
+  }
+
+  Widget buildExpandedElementoWidget() {
+    return Chip(
+      labelPadding:
+          EdgeInsets.symmetric(vertical: paddingVer, horizontal: paddingHoz),
+      label: SizedBox(
+        width: double.infinity,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Stack(
+              children: [
+                Positioned(
+                  child: Container(
+                    height: sizeChip,
+                    width: sizeChip,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: AppColors.defaultWhite),
+                  ),
+                ),
+                Positioned.fill(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      height: 13,
+                      width: 13,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                              image:
+                                  AssetImage(currentElemento.imageElemento))),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(width: 4),
+            Text(
+              currentElemento.nameElemento,
+              style: AppStyle.defaultText(
+                fontSize: fontSize.sp,
+                fontWeight: FontWeight.w500,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      ),
+      backgroundColor: currentElemento.colorElemento,
+    );
+  }
+
+  Widget buildElementoWidget() {
     return Chip(
       labelPadding:
           EdgeInsets.symmetric(vertical: paddingVer, horizontal: paddingHoz),
@@ -52,7 +114,7 @@ class ElementoWidget extends StatelessWidget {
                   image: DecorationImage(
                       image: AssetImage(currentElemento.imageElemento))),
             ),
-          )
+          ),
         ],
       ),
     );
