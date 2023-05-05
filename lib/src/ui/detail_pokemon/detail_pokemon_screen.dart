@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokerrrr_bloc/src/constants/app_color.dart';
 import 'package:pokerrrr_bloc/src/constants/app_style.dart';
-import 'package:pokerrrr_bloc/src/constants/image_asset.dart';
 import 'package:pokerrrr_bloc/src/constants/strings.dart';
 import 'package:pokerrrr_bloc/src/models/pokemon.dart';
 import 'package:pokerrrr_bloc/src/ui/detail_pokemon/components/body_index_widget.dart';
 import 'package:pokerrrr_bloc/src/ui/detail_pokemon/components/detail_pokemon_app_bar.dart';
+import 'package:pokerrrr_bloc/src/ui/detail_pokemon/components/percent_gender.dart';
 
 class DetailPokemonScreen extends StatelessWidget {
   final Pokemon currentPokemon;
@@ -65,6 +65,8 @@ class DetailPokemonScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 10.h),
+                PercentGender(maleGender: currentPokemon.generoMale ?? 0.0),
                 SizedBox(
                   height: 800,
                 )

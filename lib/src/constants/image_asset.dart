@@ -263,4 +263,10 @@ class ImageAsset {
       "assets/images/ícones/body_index_category.png";
   static const String bodyIndexHabilidade =
       "assets/images/ícones/body_index_habilidade.png";
+  //Unavailable gender
+  static const String unavailableGender =
+      "assets/images/Ícones/UnavailableGender.png";
+  //Icon Gender
+  static const String iconMale = "assets/images/Ícones/icon_male.png";
+  static const String iconFemale = "assets/images/Ícones/icon_female.png";
 }

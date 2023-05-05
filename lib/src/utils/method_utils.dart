@@ -9,6 +9,10 @@ class MethodUtils {
     }
   }
 
+  static String formatPercentage(num value) {
+    return '${value.toStringAsFixed(value.truncateToDouble() == value ? 0 : 1)} %';
+  }
+
   static String formatValue(String type, dynamic value) {
     switch (type) {
       case "PESO":

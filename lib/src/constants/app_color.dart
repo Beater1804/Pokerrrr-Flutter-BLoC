@@ -87,4 +87,7 @@ class AppColors {
   static const Color backgroundFantasmaCard = Color(0xFFEBEDF4);
   static const Color backgroundGeloCard = Color(0xFFF1FBF9);
   static const Color backgroundVoadorCard = Color(0xFFF1F4FA);
+  //Gender color
+  static const Color maleGender = Color(0xFF2551C3);
+  static const Color femaleGender = Color(0xFFFF7596);
 }
