@@ -58,13 +58,16 @@ class BodyIndexWidget extends StatelessWidget {
             ),
           ),
           child: Center(
-            child: Text(
-              MethodUtils.formatValue(type, value),
-              textAlign: TextAlign.center,
-              style: AppStyle.defaultText(
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-                color: AppColors.defaultWhiteDark.withOpacity(0.9),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: Text(
+                MethodUtils.formatValue(type, value),
+                textAlign: TextAlign.center,
+                style: AppStyle.defaultText(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.defaultWhiteDark.withOpacity(0.9),
+                ),
               ),
             ),
           ),
