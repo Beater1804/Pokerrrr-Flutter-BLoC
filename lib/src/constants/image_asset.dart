@@ -251,4 +251,16 @@ class ImageAsset {
   //Icon Favorite
   static const String inactiveFavorite = "assets/images/Ícones/Fav_2.png";
   static const String activeFavorite = "assets/images/Ícones/Fav_2Artist.png";
+  static const String inactiveDetailFavorite = "assets/images/Ícones/Fav.png";
+  static const String activeDetailFavorite =
+      "assets/images/Ícones/FavArtist.png";
+  //Icon Body Mass Index
+  static const String bodyIndexPeso =
+      "assets/images/Ícones/body_index_peso.png";
+  static const String bodyIndexAltura =
+      "assets/images/ícones/body_index_altura.png";
+  static const String bodyIndexCategory =
+      "assets/images/ícones/body_index_category.png";
+  static const String bodyIndexHabilidade =
+      "assets/images/ícones/body_index_habilidade.png";
 }

@@ -7,6 +7,7 @@ class AppColors {
   static const Color defaultRedDark = Color(0xFFFFFF00);
   static const Color backgroundSplashColor = Color(0xFF000029);
   static const Color backgroundSplashColorDark = Color(0xFFDEDEDE);
+  static const Color transparent = Colors.transparent;
   // Indicator
   static const Color activeIndicator = Color(0xFF173EA5);
   static const Color inactiveIndicator = Color(0xFF4565B7);

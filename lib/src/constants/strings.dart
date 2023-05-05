@@ -54,6 +54,7 @@ class Strings {
   static const String categoria = "CATEGORIA";
   static const String habilidade = "HABILIDADE";
   static const String general = "GÊNERO";
+  static const String unavailable = "Desconhecido";
   static const fraquezas = "Fraquezas";
   static const evolucoes = "Evoluções";
   static const level = "Nível";

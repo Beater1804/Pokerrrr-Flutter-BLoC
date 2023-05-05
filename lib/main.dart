@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pokerrrr_bloc/src/blocs/detail_pokemon/detail_pokemon_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/main_page/main_page_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/onboarding/onboarding_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/pokedex/pokedex_bloc.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => OnboardingBloc()),
           BlocProvider(create: (context) => MainPageBloc()),
           BlocProvider(create: (context) => PokedexBloc()),
+          BlocProvider(create: (context) => DetailPokemonBloc())
         ],
         child: BlocBuilder<SettingsBloc, SettingsState>(
           builder: (context, state) {

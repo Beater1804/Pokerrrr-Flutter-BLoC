@@ -5,6 +5,7 @@ import 'package:pokerrrr_bloc/src/blocs/pokedex/pokedex_bloc.dart';
 import 'package:pokerrrr_bloc/src/constants/app_color.dart';
 import 'package:pokerrrr_bloc/src/constants/lists.dart';
 import 'package:pokerrrr_bloc/src/constants/strings.dart';
+import 'package:pokerrrr_bloc/src/ui/detail_pokemon/detail_pokemon_screen.dart';
 import 'package:pokerrrr_bloc/src/ui/pokedex/components/ordem_bottomsheet.dart';
 import 'package:pokerrrr_bloc/src/ui/pokedex/components/pokemon_card.dart';
 import 'package:pokerrrr_bloc/src/ui/pokedex/components/search_pokedex.dart';
@@ -122,8 +123,20 @@ class PokedexScreen extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: EdgeInsets.symmetric(vertical: 8.h),
-                            child: PokemonCard(
-                              currentPokemon: Lists.listPokemon[index],
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => DetailPokemonScreen(
+                                      currentPokemon: Lists.listPokemon[index],
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: PokemonCard(
+                                currentPokemon: Lists.listPokemon[index],
+                              ),
                             ),
                           );
                         },

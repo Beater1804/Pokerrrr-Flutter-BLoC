@@ -9,6 +9,31 @@ class MethodUtils {
     }
   }
 
+  static String formatValue(String type, dynamic value) {
+    switch (type) {
+      case "PESO":
+        if (value is double) {
+          String formattedValue = formatDecimal(value, 1);
+          return "$formattedValue kg";
+        }
+        break;
+      case "ALTURA":
+        if (value is double) {
+          String formattedValue = formatDecimal(value, 1);
+          return "$formattedValue m";
+        }
+        break;
+    }
+
+    return value.toString();
+  }
+
+  static String formatDecimal(double number, int decimalPlaces) {
+    String formattedNumber =
+        number.toStringAsFixed(decimalPlaces).replaceAll('.', ',');
+    return formattedNumber;
+  }
+
   static Color getBackgroundCardColor(String elementoFirstType) {
     switch (elementoFirstType) {
       case Strings.grama:
