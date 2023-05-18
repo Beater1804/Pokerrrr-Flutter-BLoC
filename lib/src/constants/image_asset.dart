@@ -108,13 +108,13 @@ class ImageAsset {
   static const String avatarPngCharmeleon =
       "assets/images/Pokémons/Charmeleon-02.png";
   static const String avatarPngCharizard =
-      "assets/images/Pokémons/Charizard-02.png";
+      "assets/images/Pokémons/charizard-02.png";
   static const String avatarPngSquirtle =
-      "assets/images/Pokémons/Squirtle-02.png";
+      "assets/images/Pokémons/squirtle-02.png";
   static const String avatarPngWartortle =
-      "assets/images/Pokémons/Wartortle-02.png";
+      "assets/images/Pokémons/wartortle-02.png";
   static const String avatarPngBlastoise =
-      "assets/images/Pokémons/Blastoise-02.png";
+      "assets/images/Pokémons/blastoise-02.png";
   static const String avatarPngWeedle =
       "assets/images/Pokémons/beedrill-03.png";
   static const String avatarPngKakuna =
