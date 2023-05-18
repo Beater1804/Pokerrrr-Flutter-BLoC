@@ -269,4 +269,6 @@ class ImageAsset {
   //Icon Gender
   static const String iconMale = "assets/images/Ícones/icon_male.png";
   static const String iconFemale = "assets/images/Ícones/icon_female.png";
+  //Arrow Down
+  static const String arrowDownLevel = "assets/images/arrow_down.png";
 }

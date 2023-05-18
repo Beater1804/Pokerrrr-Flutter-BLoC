@@ -50,7 +50,7 @@ class CustomBottomBar extends StatelessWidget {
                     ),
                   );
                 }
-                return SizedBox();
+                return const SizedBox();
               },
             ),
         ],

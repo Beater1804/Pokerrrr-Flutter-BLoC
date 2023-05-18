@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokerrrr_bloc/src/blocs/main_page/main_page_bloc.dart';
 import 'package:pokerrrr_bloc/src/ui/conta/conta_screen.dart';
 import 'package:pokerrrr_bloc/src/ui/favoritos/favoritos_screen.dart';

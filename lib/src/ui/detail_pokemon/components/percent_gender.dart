@@ -15,7 +15,7 @@ class PercentGender extends StatelessWidget {
     int percentMaleThousands = (maleGender * 10).toInt();
     return Column(
       children: [
-        Container(
+        SizedBox(
           height: 8.h,
           width: 328.w,
           child: maleGender != 0.0

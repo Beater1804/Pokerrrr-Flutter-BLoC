@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pokerrrr_bloc/src/blocs/pokedex/pokedex_bloc.dart';
+import 'package:pokerrrr_bloc/src/blocs/favorite_list/favorite_list_bloc.dart';
 import 'package:pokerrrr_bloc/src/commons/elemento_widget.dart';
 import 'package:pokerrrr_bloc/src/constants/app_style.dart';
 import 'package:pokerrrr_bloc/src/constants/image_asset.dart';
@@ -100,25 +100,35 @@ class PokemonCard extends StatelessWidget {
               Positioned(
                 top: 4.h,
                 right: 4.w,
-                child: GestureDetector(
-                  onTap: () {
-                    print("Tap o UI: ${currentPokemon.nome}");
-                    final updatedPokemon = currentPokemon.copyWith(
-                        isFavorite: !currentPokemon.isFavorite);
-                    print(updatedPokemon.isFavorite);
-                    context
-                        .read<PokedexBloc>()
-                        .add(UpdatePokemon(updatedPokemon: updatedPokemon));
+                child: BlocBuilder<FavoriteListBloc, FavoriteListState>(
+                  builder: (context, state) {
+                    final isFavorite =
+                        state.listFavoriteId.contains(currentPokemon.nome);
+
+                    return GestureDetector(
+                      onTap: () {
+                        if (isFavorite) {
+                          context.read<FavoriteListBloc>().add(
+                              RemoveFromFavoriteList(
+                                  pokemonId: currentPokemon.nome));
+                        } else {
+                          context.read<FavoriteListBloc>().add(
+                              AddToFavoriteList(
+                                  pokemonId: currentPokemon.nome));
+                        }
+                      },
+                      child: SizedBox(
+                        height: 32.h,
+                        width: 32.w,
+                        child: Image.asset(
+                          isFavorite
+                              ? ImageAsset.activeFavorite
+                              : ImageAsset.inactiveFavorite,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    );
                   },
-                  child: SizedBox(
-                      height: 32.h,
-                      width: 32.w,
-                      child: Image.asset(
-                        currentPokemon.isFavorite
-                            ? ImageAsset.activeFavorite
-                            : ImageAsset.inactiveFavorite,
-                        fit: BoxFit.contain,
-                      )),
                 ),
               ),
             ],

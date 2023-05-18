@@ -1,7 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pokerrrr_bloc/src/blocs/favorite_list/favorite_list_bloc.dart';
 import 'package:pokerrrr_bloc/src/commons/elemento_widget.dart';
 import 'package:pokerrrr_bloc/src/constants/app_color.dart';
 import 'package:pokerrrr_bloc/src/constants/app_style.dart';
@@ -119,15 +121,36 @@ class DetailPokemonAppBar extends SliverPersistentHeaderDelegate {
                                       color: AppColors.defaultWhite),
                                 ),
                               ),
-                              SizedBox(
-                                height: 28.h,
-                                width: 28.w,
-                                child: Image.asset(
-                                  pokemon.isFavorite
-                                      ? ImageAsset.activeDetailFavorite
-                                      : ImageAsset.inactiveDetailFavorite,
-                                ),
-                              )
+                              BlocBuilder<FavoriteListBloc, FavoriteListState>(
+                                builder: (context, state) {
+                                  final isFavorite = state.listFavoriteId
+                                      .contains(pokemon.nome);
+
+                                  return GestureDetector(
+                                    onTap: () {
+                                      if (isFavorite) {
+                                        context.read<FavoriteListBloc>().add(
+                                            RemoveFromFavoriteList(
+                                                pokemonId: pokemon.nome));
+                                      } else {
+                                        context.read<FavoriteListBloc>().add(
+                                            AddToFavoriteList(
+                                                pokemonId: pokemon.nome));
+                                      }
+                                    },
+                                    child: SizedBox(
+                                      height: 28.h,
+                                      width: 28.w,
+                                      child: Image.asset(
+                                        isFavorite
+                                            ? ImageAsset.activeFavorite
+                                            : ImageAsset.inactiveFavorite,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ),

@@ -8,6 +8,7 @@ class AppColors {
   static const Color backgroundSplashColor = Color(0xFF000029);
   static const Color backgroundSplashColorDark = Color(0xFFDEDEDE);
   static const Color transparent = Colors.transparent;
+  static const Color lineContainerEvolucoColor = Color(0xFFE6E6E6);
   // Indicator
   static const Color activeIndicator = Color(0xFF173EA5);
   static const Color inactiveIndicator = Color(0xFF4565B7);
@@ -90,4 +91,7 @@ class AppColors {
   //Gender color
   static const Color maleGender = Color(0xFF2551C3);
   static const Color femaleGender = Color(0xFFFF7596);
+  // Color evoluco
+  static const Color titleEvolucoColor = Color(0xFF1A1A1A);
+  static const Color nomeEvolucoColor = Color(0xFF4D4D4D);
 }

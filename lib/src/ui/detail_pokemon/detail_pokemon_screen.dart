@@ -7,6 +7,7 @@ import 'package:pokerrrr_bloc/src/constants/strings.dart';
 import 'package:pokerrrr_bloc/src/models/pokemon.dart';
 import 'package:pokerrrr_bloc/src/ui/detail_pokemon/components/body_index_widget.dart';
 import 'package:pokerrrr_bloc/src/ui/detail_pokemon/components/detail_pokemon_app_bar.dart';
+import 'package:pokerrrr_bloc/src/ui/detail_pokemon/components/evoluco_condition.dart';
 import 'package:pokerrrr_bloc/src/ui/detail_pokemon/components/percent_gender.dart';
 
 class DetailPokemonScreen extends StatelessWidget {
@@ -68,6 +69,15 @@ class DetailPokemonScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 10.h),
                 PercentGender(maleGender: currentPokemon.generoMale ?? 0.0),
+                SizedBox(height: 30.h),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    Strings.fraquezas,
+                    style: AppStyle.defaultText(
+                        fontSize: 18.sp, fontWeight: FontWeight.w500),
+                  ),
+                ),
                 SingleChildScrollView(
                   child: GridView.count(
                     shrinkWrap: true,
@@ -85,9 +95,27 @@ class DetailPokemonScreen extends StatelessWidget {
                         .toList(),
                   ),
                 ),
-                SizedBox(
-                  height: 800,
-                )
+                SizedBox(height: 30.h),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    Strings.evolucoes,
+                    style: AppStyle.defaultText(
+                        fontSize: 18.sp, fontWeight: FontWeight.w500),
+                  ),
+                ),
+                Container(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.r),
+                    border:
+                        Border.all(color: AppColors.lineContainerEvolucoColor),
+                  ),
+                  child:
+                      EvolucoCondition(evolucoes: currentPokemon.listEvolucoes),
+                ),
+                const SizedBox(height: 20)
               ],
             ),
           ))
