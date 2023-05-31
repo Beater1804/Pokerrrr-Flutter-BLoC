@@ -53,13 +53,13 @@ class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
 
         sortedList.sort((a, b) {
           if (event.selectedOrdem == Strings.ordemOne) {
-            return a.nome.compareTo(b.nome);
-          } else if (event.selectedOrdem == Strings.ordemTwo) {
             return b.nome.compareTo(a.nome);
+          } else if (event.selectedOrdem == Strings.ordemTwo) {
+            return a.nome.compareTo(b.nome);
           } else if (event.selectedOrdem == Strings.ordemThree) {
-            return a.namePokemon.compareTo(b.namePokemon);
-          } else {
             return b.namePokemon.compareTo(a.namePokemon);
+          } else {
+            return a.namePokemon.compareTo(b.namePokemon);
           }
         });
 
