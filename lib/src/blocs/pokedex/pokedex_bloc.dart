@@ -50,5 +50,21 @@ class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
         }
       }
     });
+    on<FilterPokemon>((event, emit) {
+      final state = this.state;
+      if (state is PokedexInitial) {
+        final temp = state.listPokemon
+            .where((pokemon) => pokemon.listElemento
+                .any((elemento) => elemento.nameElemento == event.typeName))
+            .toList();
+
+        emit(PokedexInitial(
+          selectedTipos: state.selectedTipos,
+          selectedOrdem: state.selectedOrdem,
+          currentPokemon: state.currentPokemon,
+          listPokemon: temp,
+        ));
+      }
+    });
   }
 }

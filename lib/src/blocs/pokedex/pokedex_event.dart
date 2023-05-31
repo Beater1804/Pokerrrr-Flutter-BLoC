@@ -31,3 +31,12 @@ class UpdatePokemon extends PokedexEvent {
   @override
   List<Object> get props => [updatedPokemon];
 }
+
+class FilterPokemon extends PokedexEvent {
+  final String typeName;
+  final String sortBy;
+  const FilterPokemon({required this.typeName, required this.sortBy});
+
+  @override
+  List<Object> get props => [typeName, sortBy];
+}

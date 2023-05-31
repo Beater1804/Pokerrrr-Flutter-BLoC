@@ -140,8 +140,8 @@ class Lists {
     Strings.ordemFour,
   ];
 
-  static List<Pokemon> listPokemon = [
-    const Pokemon(
+  static const List<Pokemon> listPokemon = [
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundGrama,
       elementoImage: ImageAsset.elementoGrama,
@@ -242,7 +242,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundGrama,
       elementoImage: ImageAsset.elementoGrama,
@@ -343,7 +343,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundGrama,
       elementoImage: ImageAsset.elementoGrama,
@@ -444,7 +444,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundFogo,
       elementoImage: ImageAsset.elementoFogo,
@@ -527,7 +527,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundFogo,
       elementoImage: ImageAsset.elementoFogo,
@@ -610,7 +610,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundFogo,
       elementoImage: ImageAsset.elementoFogo,
@@ -698,7 +698,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundAgua,
       elementoImage: ImageAsset.elementoAgua,
@@ -772,7 +772,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundAgua,
       elementoImage: ImageAsset.elementoAgua,
@@ -846,7 +846,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundAgua,
       elementoImage: ImageAsset.elementoAgua,
@@ -920,7 +920,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundInseto,
       elementoImage: ImageAsset.elementoInseto,
@@ -1021,7 +1021,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundEletrico,
       elementoImage: ImageAsset.elementoEletrico,
@@ -1090,7 +1090,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundFada,
       elementoImage: ImageAsset.elementoFada,
@@ -1164,7 +1164,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundTerrestre,
       elementoImage: ImageAsset.elementoTerrestre,
@@ -1230,7 +1230,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundPedra,
       elementoImage: ImageAsset.elementoPedra,
@@ -1324,7 +1324,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundNormal,
       elementoImage: ImageAsset.elementoNormal,
@@ -1360,8 +1360,8 @@ class Lists {
           nome: Strings.nome108,
           listMiniElementos: [
             MiniElemento(
-              iconElemento: ImageAsset.elementoOutlineFada,
-              colorElemento: AppColors.botaoFadaButton,
+              iconElemento: ImageAsset.elementoOutlineNormal,
+              colorElemento: AppColors.botaoNormalButton,
             ),
           ],
           level: Strings.conditionUpLevel,
@@ -1380,7 +1380,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundVenenoso,
       elementoImage: ImageAsset.elementoVenenoso,
@@ -1441,7 +1441,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundPsiquico,
       elementoImage: ImageAsset.elementoPsiquico,
@@ -1495,7 +1495,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundAgua,
       elementoImage: ImageAsset.elementoAgua,
@@ -1544,7 +1544,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundMetal,
       elementoImage: ImageAsset.elementoMetal,
@@ -1640,7 +1640,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundDragao,
       elementoImage: ImageAsset.elementoDragao,
@@ -1708,7 +1708,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundLutador,
       elementoImage: ImageAsset.elementoLutador,
@@ -1783,7 +1783,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundGrama,
       elementoImage: ImageAsset.elementoGrama,
@@ -1872,7 +1872,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundNoturno,
       elementoImage: ImageAsset.elementoNoturno,
@@ -1938,7 +1938,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundFantasma,
       elementoImage: ImageAsset.elementoFantasma,
@@ -2044,7 +2044,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundGelo,
       elementoImage: ImageAsset.elementoGelo,
@@ -2115,7 +2115,7 @@ class Lists {
         ),
       ],
     ),
-    const Pokemon(
+    Pokemon(
       isFavorite: false,
       backgroundElemento: ImageAsset.backgroundVoador,
       elementoImage: ImageAsset.elementoVoador,

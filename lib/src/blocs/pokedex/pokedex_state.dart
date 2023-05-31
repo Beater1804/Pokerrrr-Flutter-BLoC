@@ -9,10 +9,12 @@ abstract class PokedexState extends Equatable {
 }
 
 class PokedexInitial extends PokedexState {
+  final List<Pokemon> listPokemon;
   final Tipos selectedTipos;
   final String selectedOrdem;
   final Pokemon currentPokemon;
   const PokedexInitial({
+    this.listPokemon = const <Pokemon>[...Lists.listPokemon],
     required this.selectedTipos,
     required this.selectedOrdem,
     required this.currentPokemon,

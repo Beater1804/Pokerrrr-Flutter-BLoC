@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokerrrr_bloc/src/blocs/pokedex/pokedex_bloc.dart';
 import 'package:pokerrrr_bloc/src/constants/app_color.dart';
-import 'package:pokerrrr_bloc/src/constants/lists.dart';
 import 'package:pokerrrr_bloc/src/constants/strings.dart';
 import 'package:pokerrrr_bloc/src/ui/detail_pokemon/detail_pokemon_screen.dart';
 import 'package:pokerrrr_bloc/src/ui/pokedex/components/ordem_bottomsheet.dart';
@@ -114,33 +113,38 @@ class PokedexScreen extends StatelessWidget {
                 Expanded(
                   child: BlocBuilder<PokedexBloc, PokedexState>(
                     builder: (context, state) {
-                      return ListView.builder(
-                        physics: const BouncingScrollPhysics(
-                            parent: AlwaysScrollableScrollPhysics()),
-                        padding: EdgeInsets.symmetric(horizontal: 16.w),
-                        shrinkWrap: true,
-                        itemCount: Lists.listPokemon.length,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: EdgeInsets.symmetric(vertical: 8.h),
-                            child: GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => DetailPokemonScreen(
-                                      currentPokemon: Lists.listPokemon[index],
+                      if (state is PokedexInitial) {
+                        return ListView.builder(
+                          physics: const BouncingScrollPhysics(
+                              parent: AlwaysScrollableScrollPhysics()),
+                          padding: EdgeInsets.symmetric(horizontal: 16.w),
+                          shrinkWrap: true,
+                          itemCount: state.listPokemon.length,
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: EdgeInsets.symmetric(vertical: 8.h),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => DetailPokemonScreen(
+                                        currentPokemon:
+                                            state.listPokemon[index],
+                                      ),
                                     ),
-                                  ),
-                                );
-                              },
-                              child: PokemonCard(
-                                currentPokemon: Lists.listPokemon[index],
+                                  );
+                                },
+                                child: PokemonCard(
+                                  currentPokemon: state.listPokemon[index],
+                                ),
                               ),
-                            ),
-                          );
-                        },
-                      );
+                            );
+                          },
+                        );
+                      } else {
+                        return const SizedBox();
+                      }
                     },
                   ),
                 ),
