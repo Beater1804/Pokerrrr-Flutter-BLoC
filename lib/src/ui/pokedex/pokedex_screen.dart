@@ -111,7 +111,22 @@ class PokedexScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Expanded(
-                  child: BlocBuilder<PokedexBloc, PokedexState>(
+                  child: BlocConsumer<PokedexBloc, PokedexState>(
+                    listener: (context, state) {
+                      return;
+                    },
+                    listenWhen: (previous, current) {
+                      if (previous is PokedexInitial &&
+                          current is PokedexInitial) {
+                        if (previous.selectedOrdem != current.selectedOrdem) {
+                          return true;
+                        }
+                        if (previous.selectedTipos != current.selectedTipos) {
+                          return true;
+                        }
+                      }
+                      return false;
+                    },
                     builder: (context, state) {
                       if (state is PokedexInitial) {
                         return ListView.builder(

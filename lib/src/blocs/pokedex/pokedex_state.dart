@@ -25,11 +25,13 @@ class PokedexInitial extends PokedexState {
 
   @override
   PokedexInitial copyWith({
+    List<Pokemon>? listPokemon,
     Tipos? selectedTipos,
     String? selectedOrdem,
     Pokemon? currentPokemon,
   }) {
     return PokedexInitial(
+      listPokemon: listPokemon ?? this.listPokemon,
       selectedTipos: selectedTipos ?? this.selectedTipos,
       selectedOrdem: selectedOrdem ?? this.selectedOrdem,
       currentPokemon: currentPokemon ?? this.currentPokemon,

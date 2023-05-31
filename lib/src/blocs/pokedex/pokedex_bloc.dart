@@ -7,6 +7,7 @@ import 'package:pokerrrr_bloc/src/models/pokemon.dart';
 import 'package:pokerrrr_bloc/src/models/tipos.dart';
 
 part 'pokedex_event.dart';
+
 part 'pokedex_state.dart';
 
 class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
@@ -23,13 +24,33 @@ class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
     on<ChooseTipos>((event, emit) {
       final state = this.state;
       if (state is PokedexInitial) {
-        emit(state.copyWith(selectedTipos: event.selectedTipos));
+        print(state.listPokemon.length);
+        print(state.selectedTipos.title);
+        final listSortPokemon = Lists.listPokemon
+            .where((pokemon) => pokemon.listElemento.any((elemento) =>
+                elemento.nameElemento == event.selectedTipos.title))
+            .toList();
+        print(listSortPokemon.length);
+
+        emit(
+          state.copyWith(
+            selectedTipos: event.selectedTipos,
+            listPokemon: List<Pokemon>.from(listSortPokemon),
+          ),
+        );
       }
     });
     on<ChooseOrdem>((event, emit) {
       final state = this.state;
       if (state is PokedexInitial) {
-        emit(state.copyWith(selectedOrdem: event.selectedOrdem));
+        // final listSortPokemon = state.listPokemon.sort((a, b) => a.namePokemon.compareTo(b.namePokemon))
+
+        // emit(
+        //   state.copyWith(
+        //     selectedOrdem: event.selectedOrdem,
+        //     listPokemon: listSortPokemon,
+        //   ),
+        // );
       }
     });
 
