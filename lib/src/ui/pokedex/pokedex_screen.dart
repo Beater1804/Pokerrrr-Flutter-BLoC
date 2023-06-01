@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokerrrr_bloc/src/blocs/pokedex/pokedex_bloc.dart';
+import 'package:pokerrrr_bloc/src/blocs/search_pokemon/search_pokemon_bloc.dart';
 import 'package:pokerrrr_bloc/src/constants/app_color.dart';
 import 'package:pokerrrr_bloc/src/constants/strings.dart';
 import 'package:pokerrrr_bloc/src/ui/detail_pokemon/detail_pokemon_screen.dart';
@@ -17,6 +18,7 @@ class PokedexScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final searchBloc = BlocProvider.of<SearchPokemonBloc>(context);
     return GestureDetector(
       onTap: () => MethodUtils.closeKeyboard(context),
       child: Scaffold(
@@ -27,7 +29,9 @@ class PokedexScreen extends StatelessWidget {
             height: 1.sh,
             child: Column(
               children: [
-                const SearchPokedex(),
+                SearchPokedex(
+                  searchController: searchBloc.searchController,
+                ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 12.h),
                   child: Divider(
@@ -111,50 +115,67 @@ class PokedexScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Expanded(
-                  child: BlocConsumer<PokedexBloc, PokedexState>(
-                    listener: (context, state) {
-                      return;
-                    },
-                    listenWhen: (previous, current) {
-                      if (previous is PokedexInitial &&
-                          current is PokedexInitial) {
-                        if (previous.selectedOrdem != current.selectedOrdem) {
-                          return true;
-                        }
-                        if (previous.selectedTipos != current.selectedTipos) {
-                          return true;
-                        }
-                      }
-                      return false;
-                    },
-                    builder: (context, state) {
-                      if (state is PokedexInitial) {
-                        return ListView.builder(
-                          physics: const BouncingScrollPhysics(
-                              parent: AlwaysScrollableScrollPhysics()),
-                          padding: EdgeInsets.symmetric(horizontal: 16.w),
-                          shrinkWrap: true,
-                          itemCount: state.listPokemon.length,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding: EdgeInsets.symmetric(vertical: 8.h),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => DetailPokemonScreen(
-                                        currentPokemon:
-                                            state.listPokemon[index],
+                  child: BlocBuilder<SearchPokemonBloc, SearchPokemonState>(
+                    builder: (context, searchState) {
+                      if (searchState is SearchPokemonInitial) {
+                        return BlocConsumer<PokedexBloc, PokedexState>(
+                          listener: (context, state) {
+                            return;
+                          },
+                          listenWhen: (previous, current) {
+                            if (previous is PokedexInitial &&
+                                current is PokedexInitial) {
+                              if (previous.selectedOrdem !=
+                                  current.selectedOrdem) {
+                                return true;
+                              }
+                              if (previous.selectedTipos !=
+                                  current.selectedTipos) {
+                                return true;
+                              }
+                            }
+                            return false;
+                          },
+                          builder: (context, state) {
+                            if (state is PokedexInitial) {
+                              return ListView.builder(
+                                physics: const BouncingScrollPhysics(
+                                    parent: AlwaysScrollableScrollPhysics()),
+                                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                                shrinkWrap: true,
+                                itemCount: searchState.searchPokemon.isNotEmpty
+                                    ? searchState.searchPokemon.length
+                                    : state.listPokemon.length,
+                                itemBuilder: (context, index) {
+                                  return Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 8.h),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                DetailPokemonScreen(
+                                              currentPokemon:
+                                                  state.listPokemon[index],
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                      child: PokemonCard(
+                                        currentPokemon: searchState
+                                                .searchPokemon.isNotEmpty
+                                            ? searchState.searchPokemon[index]
+                                            : state.listPokemon[index],
                                       ),
                                     ),
                                   );
                                 },
-                                child: PokemonCard(
-                                  currentPokemon: state.listPokemon[index],
-                                ),
-                              ),
-                            );
+                              );
+                            } else {
+                              return const SizedBox();
+                            }
                           },
                         );
                       } else {
