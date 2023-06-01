@@ -24,8 +24,8 @@ class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
     on<ChooseTipos>((event, emit) {
       final state = this.state;
       if (state is PokedexInitial) {
-        print(state.listPokemon.length);
-        print(state.selectedTipos.title);
+        // print(state.listPokemon.length);
+        // print(state.selectedTipos.title);
         List<Pokemon> listSortPokemon;
         if (event.selectedTipos.title == Strings.tiposOne) {
           listSortPokemon = Lists.listPokemon;
@@ -36,7 +36,7 @@ class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
               .toList();
         }
 
-        print(listSortPokemon.length);
+        // print(listSortPokemon.length);
 
         emit(
           state.copyWith(
@@ -69,40 +69,6 @@ class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
             listPokemon: sortedList,
           ),
         );
-      }
-    });
-
-    on<UpdatePokemon>((event, emit) {
-      final state = this.state;
-      if (state is PokedexInitial) {
-        final updatedPokemon = event.updatedPokemon;
-        final index = Lists.listPokemon
-            .indexWhere((pokemon) => pokemon.nome == updatedPokemon.nome);
-        // print("Nome select: ${Lists.listPokemon[index].nome}");
-        // print("Before change: ${Lists.listPokemon[index].isFavorite}");
-        if (index != -1) {
-          Lists.listPokemon[index] = updatedPokemon;
-          // print(
-          //     "Phần tử tiếp theo: ${Lists.listPokemon[index + 1].isFavorite}");
-          // print("After change: ${Lists.listPokemon[index].isFavorite}");
-          emit(state.copyWith(currentPokemon: updatedPokemon));
-        }
-      }
-    });
-    on<FilterPokemon>((event, emit) {
-      final state = this.state;
-      if (state is PokedexInitial) {
-        final temp = state.listPokemon
-            .where((pokemon) => pokemon.listElemento
-                .any((elemento) => elemento.nameElemento == event.typeName))
-            .toList();
-
-        emit(PokedexInitial(
-          selectedTipos: state.selectedTipos,
-          selectedOrdem: state.selectedOrdem,
-          currentPokemon: state.currentPokemon,
-          listPokemon: temp,
-        ));
       }
     });
   }
