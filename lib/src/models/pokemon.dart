@@ -19,6 +19,7 @@ class Pokemon {
   final double? generoMale;
   final List<Elemento> listFraquezas;
   final List<Evolucoes> listEvolucoes;
+  final String nameRegioes;
 
   const Pokemon({
     required this.isFavorite,
@@ -37,6 +38,7 @@ class Pokemon {
     this.generoMale,
     required this.listFraquezas,
     required this.listEvolucoes,
+    this.nameRegioes = 'none',
   });
 
   Pokemon copyWith({
@@ -56,6 +58,7 @@ class Pokemon {
     double? generoMale,
     List<Elemento>? listFraquezas,
     List<Evolucoes>? listEvolucoes,
+    String? nameRegioes,
   }) {
     return Pokemon(
       isFavorite: isFavorite ?? this.isFavorite,
@@ -74,6 +77,7 @@ class Pokemon {
       generoMale: generoMale ?? this.generoMale,
       listFraquezas: listFraquezas ?? this.listFraquezas,
       listEvolucoes: listEvolucoes ?? this.listEvolucoes,
+      nameRegioes: nameRegioes ?? this.nameRegioes,
     );
   }
 }

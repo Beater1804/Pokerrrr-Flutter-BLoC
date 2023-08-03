@@ -8,7 +8,9 @@ import 'package:pokerrrr_bloc/src/blocs/favorite_list/favorite_list_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/main_page/main_page_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/onboarding/onboarding_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/pokedex/pokedex_bloc.dart';
+import 'package:pokerrrr_bloc/src/blocs/regioes_list/regioes_list_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/search_pokemon/search_pokemon_bloc.dart';
+import 'package:pokerrrr_bloc/src/blocs/search_regioes/search_regioes_bloc.dart';
 import 'package:pokerrrr_bloc/src/blocs/settings/settings_bloc.dart';
 import 'package:pokerrrr_bloc/src/constants/app_theme.dart';
 import 'package:pokerrrr_bloc/src/ui/splash/splash_screen.dart';
@@ -85,6 +87,9 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           BlocProvider(create: (context) => PokedexBloc()),
           BlocProvider(create: (context) => FavoriteListBloc()),
           BlocProvider(create: (context) => SearchPokemonBloc()),
+          BlocProvider(
+              create: (context) => RegioesListBloc()..add(RegioesListLoad())),
+          BlocProvider(create: (context) => SearchRegioesBloc()),
         ],
         child: BlocBuilder<SettingsBloc, SettingsState>(
           builder: (context, state) {

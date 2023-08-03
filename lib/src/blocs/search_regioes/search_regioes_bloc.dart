@@ -6,44 +6,59 @@ import 'package:pokerrrr_bloc/src/constants/strings.dart';
 import 'package:pokerrrr_bloc/src/models/pokemon.dart';
 import 'package:pokerrrr_bloc/src/models/tipos.dart';
 
-part 'pokedex_event.dart';
+part 'search_regioes_event.dart';
+part 'search_regioes_state.dart';
 
-part 'pokedex_state.dart';
-
-class PokedexBloc extends Bloc<PokedexEvent, PokedexState> {
-  PokedexBloc()
-      : super(PokedexInitial(
-          selectedTipos: const Tipos(
+class SearchRegioesBloc extends Bloc<SearchRegioesEvent, SearchRegioesState> {
+  SearchRegioesBloc()
+      : super(const SearchRegioesInitial(
+          selectedTipos: Tipos(
             title: Strings.tiposOne,
             textColor: AppColors.botaoTodosText,
             backgroundColor: AppColors.botaoTodosButton,
           ),
           selectedOrdem: Strings.ordemOne,
-          currentPokemon: Lists.listPokemon.first,
+          title: '',
         )) {
+    on<LoadTitle>((event, emit) {
+      final state = this.state;
+      if (state is SearchRegioesInitial) {
+        List<Pokemon> listSortedPokemon;
+        listSortedPokemon = Lists.listPokemon
+            .where((pokemon) => pokemon.nameRegioes == event.title)
+            .toList();
+        emit(state.copyWith(
+          title: event.title,
+          listPokemon: listSortedPokemon,
+        ));
+      }
+    });
     on<ChooseTipos>((event, emit) {
       final state = this.state;
-      if (state is PokedexInitial) {
-        List<Pokemon> listSortPokemon;
+      if (state is SearchRegioesInitial) {
+        List<Pokemon> listSortedPokemon;
         if (event.selectedTipos.title == Strings.tiposOne) {
-          listSortPokemon = Lists.listPokemon;
+          listSortedPokemon = Lists.listPokemon
+              .where((pokemon) => pokemon.nameRegioes == state.title)
+              .toList();
         } else {
-          listSortPokemon = Lists.listPokemon
+          listSortedPokemon = Lists.listPokemon
+              .where((pokemon) => pokemon.nameRegioes == state.title)
+              .toList();
+          listSortedPokemon = listSortedPokemon
               .where((pokemon) => pokemon.listElemento.any((elemento) =>
                   elemento.nameElemento == event.selectedTipos.title))
               .toList();
         }
-        emit(
-          state.copyWith(
-            selectedTipos: event.selectedTipos,
-            listPokemon: listSortPokemon,
-          ),
-        );
+        emit(state.copyWith(
+          listPokemon: listSortedPokemon,
+          selectedTipos: event.selectedTipos,
+        ));
       }
     });
     on<ChooseOrdem>((event, emit) {
       final state = this.state;
-      if (state is PokedexInitial) {
+      if (state is SearchRegioesInitial) {
         final List<Pokemon> sortedList = List.from(state.listPokemon);
 
         sortedList.sort((a, b) {

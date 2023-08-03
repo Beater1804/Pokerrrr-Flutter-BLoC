@@ -6,6 +6,7 @@ import 'package:pokerrrr_bloc/src/models/evolucoes.dart';
 import 'package:pokerrrr_bloc/src/models/mini_elemento.dart';
 import 'package:pokerrrr_bloc/src/models/onboarding.dart';
 import 'package:pokerrrr_bloc/src/models/pokemon.dart';
+import 'package:pokerrrr_bloc/src/models/regioes.dart';
 import 'package:pokerrrr_bloc/src/models/tipos.dart';
 
 class Lists {
@@ -246,6 +247,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.kanto,
     ),
     Pokemon(
       isFavorite: false,
@@ -347,6 +349,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.kanto,
     ),
     Pokemon(
       isFavorite: false,
@@ -448,6 +451,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.kanto,
     ),
     Pokemon(
       isFavorite: false,
@@ -531,6 +535,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.kanto,
     ),
     Pokemon(
       isFavorite: false,
@@ -614,6 +619,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.kanto,
     ),
     Pokemon(
       isFavorite: false,
@@ -702,6 +708,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.kanto,
     ),
     Pokemon(
       isFavorite: false,
@@ -776,6 +783,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.kanto,
     ),
     Pokemon(
       isFavorite: false,
@@ -850,6 +858,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.kanto,
     ),
     Pokemon(
       isFavorite: false,
@@ -924,6 +933,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.kanto,
     ),
     Pokemon(
       isFavorite: false,
@@ -1548,6 +1558,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.johto,
     ),
     Pokemon(
       isFavorite: false,
@@ -1644,6 +1655,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.hoenn,
     ),
     Pokemon(
       isFavorite: false,
@@ -1712,6 +1724,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.hoenn,
     ),
     Pokemon(
       isFavorite: false,
@@ -1787,6 +1800,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.sinnoh,
     ),
     Pokemon(
       isFavorite: false,
@@ -1876,6 +1890,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.unova,
     ),
     Pokemon(
       isFavorite: false,
@@ -1942,6 +1957,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.unova,
     ),
     Pokemon(
       isFavorite: false,
@@ -2048,6 +2064,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.unova,
     ),
     Pokemon(
       isFavorite: false,
@@ -2119,6 +2136,7 @@ class Lists {
           ],
         ),
       ],
+      nameRegioes: Strings.unova,
     ),
     Pokemon(
       isFavorite: false,
@@ -2214,6 +2232,90 @@ class Lists {
             ),
           ],
         ),
+      ],
+      nameRegioes: Strings.alola,
+    ),
+  ];
+
+  static const List<Regioes> listRegioes = [
+    Regioes(
+      nameRegioes: Strings.kanto,
+      nomeRegioes: Strings.nomeOne,
+      backgroundRegioes: ImageAsset.kantoBackground,
+      pokemonSamples: [
+        ImageAsset.kantoPoke1,
+        ImageAsset.kantoPoke2,
+        ImageAsset.kantoPoke3,
+      ],
+    ),
+    Regioes(
+      nameRegioes: Strings.johto,
+      nomeRegioes: Strings.nomeTwo,
+      backgroundRegioes: ImageAsset.jontoBackground,
+      pokemonSamples: [
+        ImageAsset.jontoPoke1,
+        ImageAsset.jontoPoke2,
+        ImageAsset.jontoPoke3,
+      ],
+    ),
+    Regioes(
+      nameRegioes: Strings.hoenn,
+      nomeRegioes: Strings.nomeThree,
+      backgroundRegioes: ImageAsset.hoennBackground,
+      pokemonSamples: [
+        ImageAsset.hoennPoke1,
+        ImageAsset.hoennPoke2,
+        ImageAsset.hoennPoke3,
+      ],
+    ),
+    Regioes(
+      nameRegioes: Strings.sinnoh,
+      nomeRegioes: Strings.nomeFour,
+      backgroundRegioes: ImageAsset.sinnohBackground,
+      pokemonSamples: [
+        ImageAsset.sinnohPoke1,
+        ImageAsset.sinnohPoke2,
+        ImageAsset.sinnohPoke3,
+      ],
+    ),
+    Regioes(
+      nameRegioes: Strings.unova,
+      nomeRegioes: Strings.nomeFive,
+      backgroundRegioes: ImageAsset.unovaBackground,
+      pokemonSamples: [
+        ImageAsset.unovaPoke1,
+        ImageAsset.unovaPoke2,
+        ImageAsset.unovaPoke3,
+      ],
+    ),
+    Regioes(
+      nameRegioes: Strings.kalos,
+      nomeRegioes: Strings.nomeSix,
+      backgroundRegioes: ImageAsset.kalosBackground,
+      pokemonSamples: [
+        ImageAsset.kalosPoke1,
+        ImageAsset.kalosPoke2,
+        ImageAsset.kalosPoke3,
+      ],
+    ),
+    Regioes(
+      nameRegioes: Strings.alola,
+      nomeRegioes: Strings.nomeSeven,
+      backgroundRegioes: ImageAsset.alolaBackground,
+      pokemonSamples: [
+        ImageAsset.alolaPoke1,
+        ImageAsset.alolaPoke2,
+        ImageAsset.alolaPoke3,
+      ],
+    ),
+    Regioes(
+      nameRegioes: Strings.galar,
+      nomeRegioes: Strings.nomeEight,
+      backgroundRegioes: ImageAsset.galarBackground,
+      pokemonSamples: [
+        ImageAsset.galarPoke1,
+        ImageAsset.galarPoke2,
+        ImageAsset.galarPoke3,
       ],
     ),
   ];

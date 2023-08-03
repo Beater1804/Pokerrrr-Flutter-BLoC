@@ -33,7 +33,10 @@ class SelectionAuthenticationScreen extends StatelessWidget {
                     style: AppStyle.defaultText(
                         fontSize: 18, fontWeight: FontWeight.w500),
                   ),
-                  const Icon(Icons.arrow_forward, size: 27),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Icon(Icons.arrow_forward, size: 27),
+                  ),
                 ],
               ),
             ),
@@ -69,18 +72,36 @@ class SelectionAuthenticationScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 0.05.sh),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: CommonButton(
-                label: Strings.signUpAuthentication,
-                labelColor: AppColors.ctaActiveText,
-                radius: 50,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MainPageScreen()),
+                    (route) => false);
+              },
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: CommonButton(
+                  label: Strings.signUpAuthentication,
+                  labelColor: AppColors.ctaActiveText,
+                  radius: 50,
+                ),
               ),
             ),
-            const CommonButton(
-                backgroundColor: Colors.transparent,
-                label: Strings.loginAuthentication,
-                labelColor: AppColors.ctaOutlineText),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MainPageScreen()),
+                    (route) => false);
+              },
+              child: const CommonButton(
+                  backgroundColor: Colors.transparent,
+                  label: Strings.loginAuthentication,
+                  labelColor: AppColors.ctaOutlineText),
+            ),
           ],
         ),
       ),

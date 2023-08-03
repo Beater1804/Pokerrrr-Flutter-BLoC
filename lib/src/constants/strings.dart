@@ -294,4 +294,22 @@ class Strings {
       "Quando este Pokémon está bem de saúde, seu ranho fica mais grosso e pegajoso. Ele vai espalhar seu ranho em quem não gosta.";
   static const String descToucannon =
       "Eles batem bicos com outros de sua espécie para se comunicar. A força e o número de acertos dizem uns aos outros como eles se sentem.";
+  // Name of regioes
+  static const String alola = "Alola";
+  static const String galar = "Galar";
+  static const String hoenn = "Hoenn";
+  static const String johto = "Johto";
+  static const String kalos = "Kalos";
+  static const String kanto = "Kanto";
+  static const String sinnoh = "Sinnoh";
+  static const String unova = "Unova";
+  // Nome of regioes
+  static const String nomeOne = "1º Geração";
+  static const String nomeTwo = "2º Geração";
+  static const String nomeThree = "3º Geração";
+  static const String nomeFour = "4º Geração";
+  static const String nomeFive = "5º Geração";
+  static const String nomeSix = "6º Geração";
+  static const String nomeSeven = "7º Geração";
+  static const String nomeEight = "8º Geração";
 }

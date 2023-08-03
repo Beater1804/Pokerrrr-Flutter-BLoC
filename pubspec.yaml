@@ -76,7 +76,15 @@ flutter:
     - assets/images/Elementos/OutlineIcons/
     - assets/images/Elementos/Icons/
     - assets/images/BigElementoOutlines/
-
+    - assets/images/Regiões/
+    - assets/images/Regiões/Alola/
+    - assets/images/Regiões/Galar/
+    - assets/images/Regiões/Hoenn/
+    - assets/images/Regiões/Jonto/
+    - assets/images/Regiões/Kalos/
+    - assets/images/Regiões/Kanto/
+    - assets/images/Regiões/Sinnoh/
+    - assets/images/Regiões/Unova/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

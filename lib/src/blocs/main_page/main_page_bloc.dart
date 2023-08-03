@@ -9,9 +9,6 @@ class MainPageBloc extends Bloc<MainPageEvent, MainPageState> {
   MainPageBloc() : super(const MainPageInitial()) {
     on<UpdatePage>((event, emit) {
       emit(MainPageInitial(currentIndex: event.currentIndex));
-      // void updateIndex(int index) {
-      //   currentIndex.value = index;
-      // }
     });
   }
 }

@@ -94,4 +94,9 @@ class AppColors {
   // Color evoluco
   static const Color titleEvolucoColor = Color(0xFF1A1A1A);
   static const Color nomeEvolucoColor = Color(0xFF4D4D4D);
+  // Regioes color
+  static const Color nameRegioesColor = Color(0xFFFFFFFF);
+  static const Color nomeRegioesColor = Color(0xFFCCCCCC);
+  // Title page color
+  static const Color titlePageColor = Color(0xFF333333);
 }

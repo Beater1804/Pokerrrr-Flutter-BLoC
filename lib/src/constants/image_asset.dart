@@ -271,4 +271,46 @@ class ImageAsset {
   static const String iconFemale = "assets/images/Ícones/icon_female.png";
   //Arrow Down
   static const String arrowDownLevel = "assets/images/arrow_down.png";
+  //Background Regioes
+  static const alolaBackground =
+      "assets/images/Regiões/Alola/alola background.png";
+  static const galarBackground =
+      "assets/images/Regiões/Galar/galar background.png";
+  static const hoennBackground =
+      "assets/images/Regiões/Hoenn/hoenn background.png";
+  static const jontoBackground =
+      "assets/images/Regiões/Jonto/Johto background.png";
+  static const kalosBackground =
+      "assets/images/Regiões/Kalos/kalos background.png";
+  static const kantoBackground =
+      "assets/images/Regiões/Kanto/kanto background.png";
+  static const sinnohBackground =
+      "assets/images/Regiões/Sinnoh/sinnoh background.png";
+  static const unovaBackground =
+      "assets/images/Regiões/Unova/unova background.png";
+  //Pokemon Sample Regioes
+  static const alolaPoke1 = "assets/images/Regiões/Alola/alola_poke_1.png";
+  static const alolaPoke2 = "assets/images/Regiões/Alola/alola_poke_2.png";
+  static const alolaPoke3 = "assets/images/Regiões/Alola/alola_poke_3.png";
+  static const galarPoke1 = "assets/images/Regiões/Galar/galar_poke_1.png";
+  static const galarPoke2 = "assets/images/Regiões/Galar/galar_poke_2.png";
+  static const galarPoke3 = "assets/images/Regiões/Galar/galar_poke_3.png";
+  static const hoennPoke1 = "assets/images/Regiões/Hoenn/hoenn_poke_1.png";
+  static const hoennPoke2 = "assets/images/Regiões/Hoenn/hoenn_poke_2.png";
+  static const hoennPoke3 = "assets/images/Regiões/Hoenn/hoenn_poke_3.png";
+  static const jontoPoke1 = "assets/images/Regiões/Jonto/jonto_poke_1.png";
+  static const jontoPoke2 = "assets/images/Regiões/Jonto/jonto_poke_2.png";
+  static const jontoPoke3 = "assets/images/Regiões/Jonto/jonto_poke_3.png";
+  static const kalosPoke1 = "assets/images/Regiões/Kalos/kalos_poke_1.png";
+  static const kalosPoke2 = "assets/images/Regiões/Kalos/kalos_poke_2.png";
+  static const kalosPoke3 = "assets/images/Regiões/Kalos/kalos_poke_3.png";
+  static const kantoPoke1 = "assets/images/Regiões/Kanto/kanto_poke_1.png";
+  static const kantoPoke2 = "assets/images/Regiões/Kanto/kanto_poke_2.png";
+  static const kantoPoke3 = "assets/images/Regiões/Kanto/kanto_poke_3.png";
+  static const sinnohPoke1 = "assets/images/Regiões/Sinnoh/sinnoh_poke_1.png";
+  static const sinnohPoke2 = "assets/images/Regiões/Sinnoh/sinnoh_poke_2.png";
+  static const sinnohPoke3 = "assets/images/Regiões/Sinnoh/sinnoh_poke_3.png";
+  static const unovaPoke1 = "assets/images/Regiões/Unova/unova_poke_1.png";
+  static const unovaPoke2 = "assets/images/Regiões/Unova/unova_poke_2.png";
+  static const unovaPoke3 = "assets/images/Regiões/Unova/unova_poke_3.png";
 }
