@@ -313,4 +313,6 @@ class ImageAsset {
   static const unovaPoke1 = "assets/images/Regiões/Unova/unova_poke_1.png";
   static const unovaPoke2 = "assets/images/Regiões/Unova/unova_poke_2.png";
   static const unovaPoke3 = "assets/images/Regiões/Unova/unova_poke_3.png";
+  // No Pokemon Favorite
+  static const noPokemonFavorite = "assets/images/no_favorite_pokemon.png";
 }

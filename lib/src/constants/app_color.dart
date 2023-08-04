@@ -99,4 +99,9 @@ class AppColors {
   static const Color nomeRegioesColor = Color(0xFFCCCCCC);
   // Title page color
   static const Color titlePageColor = Color(0xFF333333);
+  // No Pokemon Favorite
+  static const Color titleNoPokemonColor = Color(0xFF333333);
+  static const Color descriptionNoPokemonColor = Color(0xFF4D4D4D);
+  // Background Delete Color
+  static const Color backgroundDeleteColor = Color(0xFFCD3131);
 }

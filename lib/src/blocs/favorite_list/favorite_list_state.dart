@@ -3,8 +3,10 @@ part of 'favorite_list_bloc.dart';
 
 class FavoriteListState extends Equatable {
   final List<String> listFavoriteId;
+  final List<Pokemon> listPokemon;
   const FavoriteListState({
     this.listFavoriteId = const [],
+    this.listPokemon = const [],
   });
 
   @override
@@ -12,9 +14,11 @@ class FavoriteListState extends Equatable {
 
   FavoriteListState copyWith({
     List<String>? listFavoriteId,
+    List<Pokemon>? listPokemon,
   }) {
     return FavoriteListState(
       listFavoriteId: listFavoriteId ?? this.listFavoriteId,
+      listPokemon: listPokemon ?? this.listPokemon,
     );
   }
 }

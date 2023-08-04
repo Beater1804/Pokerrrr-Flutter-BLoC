@@ -312,4 +312,9 @@ class Strings {
   static const String nomeSix = "6º Geração";
   static const String nomeSeven = "7º Geração";
   static const String nomeEight = "8º Geração";
+  // No Pokemon Favorite
+  static const String titleNoPokemonFavorite =
+      "Você não favoritou nenhum Pokémon :( ";
+  static const String descriptionNoPokemonFavorite =
+      "Clique no ícone de coração dos seus pokémons favoritos e eles aparecerão aqui.";
 }
