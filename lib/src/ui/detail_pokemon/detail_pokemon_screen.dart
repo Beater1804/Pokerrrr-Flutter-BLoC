@@ -78,22 +78,21 @@ class DetailPokemonScreen extends StatelessWidget {
                         fontSize: 18.sp, fontWeight: FontWeight.w500),
                   ),
                 ),
-                SingleChildScrollView(
-                  child: GridView.count(
-                    shrinkWrap: true,
-                    crossAxisCount: 2,
-                    childAspectRatio: 1 / .2,
-                    mainAxisSpacing: 8,
-                    crossAxisSpacing: 16,
-                    children: currentPokemon.listFraquezas
-                        .map(
-                          (fraquezas) => ElementoWidget(
-                            currentElemento: fraquezas,
-                            isExpanded: true,
-                          ),
-                        )
-                        .toList(),
-                  ),
+                GridView.count(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  childAspectRatio: 1 / .2,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 16,
+                  children: currentPokemon.listFraquezas
+                      .map(
+                        (fraquezas) => ElementoWidget(
+                          currentElemento: fraquezas,
+                          isExpanded: true,
+                        ),
+                      )
+                      .toList(),
                 ),
                 SizedBox(height: 30.h),
                 Align(

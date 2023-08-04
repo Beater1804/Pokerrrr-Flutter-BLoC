@@ -72,36 +72,32 @@ class SelectionAuthenticationScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 0.05.sh),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MainPageScreen()),
-                    (route) => false);
-              },
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: CommonButton(
-                  label: Strings.signUpAuthentication,
-                  labelColor: AppColors.ctaActiveText,
-                  radius: 50,
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: CommonButton(
+                onTap: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainPageScreen()),
+                      (route) => false);
+                },
+                label: Strings.signUpAuthentication,
+                labelColor: AppColors.ctaActiveText,
+                radius: 50,
               ),
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MainPageScreen()),
-                    (route) => false);
-              },
-              child: const CommonButton(
-                  backgroundColor: Colors.transparent,
-                  label: Strings.loginAuthentication,
-                  labelColor: AppColors.ctaOutlineText),
-            ),
+            CommonButton(
+                onTap: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainPageScreen()),
+                      (route) => false);
+                },
+                backgroundColor: Colors.transparent,
+                label: Strings.loginAuthentication,
+                labelColor: AppColors.ctaOutlineText),
           ],
         ),
       ),

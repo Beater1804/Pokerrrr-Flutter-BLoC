@@ -952,7 +952,7 @@ class Lists {
         Elemento(
           imageElemento: ImageAsset.elementoVenenoso,
           nameElemento: Strings.venenoso,
-          colorElemento: AppColors.botaoInsetoButton,
+          colorElemento: AppColors.botaoVenenosoButton,
         ),
       ],
       descriptionPokemon: Strings.descBeedrill,

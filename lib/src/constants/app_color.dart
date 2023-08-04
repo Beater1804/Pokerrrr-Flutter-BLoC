@@ -104,4 +104,9 @@ class AppColors {
   static const Color descriptionNoPokemonColor = Color(0xFF4D4D4D);
   // Background Delete Color
   static const Color backgroundDeleteColor = Color(0xFFCD3131);
+  // Conta Description Color
+  static const Color descriptionContaColor = Color(0xFF4D4D4D);
+  static const Color activeSwitchColor = Color(0xFF173EA5);
+  static const Color activeTrackColor = Color(0xFF5D78C0);
+  static const Color redTitleColor = Color(0xFFCD3131);
 }
